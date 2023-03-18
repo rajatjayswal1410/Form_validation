@@ -33,12 +33,13 @@
 
 <body>
     <div class="container pt-5">
-        <form class="row mt-5">
+        <form class="row mt-5" id="register_form">
             <div class="col-12 mb-2">
                 <h4 class="text-center">Create an Account</h4>
             </div>
             <div class="col-12 mb-2 col-md-6" id="FirstName">
                 <input type="text" placeholder="Firstname">
+                <span></span>
             </div>
             <div class="col-12 mb-2 col-md-6" id="LastName">
                 <input type="text" placeholder="Lastname">
@@ -47,7 +48,7 @@
                 <input type="text" placeholder="Phone" maxlength="10">
             </div>
             <div class="col-12 mb-2 col-md-6" id="Email">
-                <input type="text" placeholder="Email" maxlength="10">
+                <input type="text" placeholder="Email">
             </div>
             <div class="col-12 mb-2 col-md-6" id="Password">
                 <input type="password" placeholder="Password">
@@ -57,15 +58,13 @@
             </div>
             <div class="col-12">
                 <center>
-                    <button class="fw-bold  btn btn-warning">Register</button>
+                    <button type="submit" class="fw-bold  btn btn-warning">Register</button>
                 </center>
             </div>
         </form>
     </div>
-
-    <script>
-
-    </script>
+    <script src="./Validation.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
