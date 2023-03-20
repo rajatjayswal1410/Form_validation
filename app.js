@@ -21,10 +21,8 @@ form.addEventListener("submit", (e) => {
     }
 
     const ValidationResult = Validater(data)
-
-    console.log(ValidationResult);
-
-
+    
+    showErrors(ValidationResult)
 })
 
 
