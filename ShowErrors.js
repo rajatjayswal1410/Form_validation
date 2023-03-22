@@ -1,4 +1,4 @@
-const showErrors=  (errors) => {
+const showErrors = (errors) => {
     let i = 0
     while (i < errors.length) {
         const errorDetails = errors[i]
@@ -8,12 +8,15 @@ const showErrors=  (errors) => {
         span.id = id
         span.innerText = errorDetails.message
         span.style.color = "red"
-        if(div.children.length > 1){
+        if (div.children.length > 1) {
             div.removeChild(div.lastElementChild)
             div.appendChild(span)
-        }else{
+        } else {
             div.appendChild(span)
         }
         i++
     }
 }
+
+
+
