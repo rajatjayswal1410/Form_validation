@@ -1,3 +1,5 @@
+const Users = JSON.parse(localStorage.getItem("Users") || "[]")
+
 const inputs = {
     FirstName:document.getElementById("FirstName").children[0],
     LastName:document.getElementById("LastName").children[0],
@@ -21,9 +23,25 @@ form.addEventListener("submit", (e) => {
         ConfirmPassword:inputs.ConfirmPassword.value
     }
     const ValidationResult = Validater(data)
-    showErrors(ValidationResult)
-    IsSumited = true
+    if(ValidationResult.length > 0){
+        showErrors(ValidationResult)
+        IsSumited = true
+        return
+    }
+
+    const isExist = Users.find((x) => x.Email === data.Email)
+    if(isExist){
+        showErrors([{id:"Email", message:"Email is allready exist"}])
+        return
+    }
+    RemoveErrors(ValidationResult, "Email")
+    Users.push(data)
+    localStorage.setItem("Users",JSON.stringify( Users))
 })
+
+
+
+
 
 
 const CreateEvents =( (inputs) => {
