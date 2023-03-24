@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
 })
 
 
-const CreateEvents = (inputs) => {
+const CreateEvents =( (inputs) => {
     const ids = Object.keys(inputs)
     let i =0
     const data = {}
@@ -48,18 +48,9 @@ const CreateEvents = (inputs) => {
 
         i++
     }
-}
-
-CreateEvents(inputs)
+})(inputs)
 
 
-const RemoveErrors = (errors, id) => {
-    const div = document.getElementById(id)
-    const find = errors.find((x) => x.id === id)
-    if(!find && div.children.length > 1){
-        div.removeChild(div.lastElementChild)
-    }
-}
 
 
 

@@ -48,7 +48,7 @@ const Validater = (data) => {
             message:"Required field Password is Empty"
         }
         errors.push(errorDetails)
-    }
+    } 
     if(!data.ConfirmPassword){
         errorDetails ={
             id:"ConfirmPassword",

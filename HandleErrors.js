@@ -18,5 +18,13 @@ const showErrors = (errors) => {
     }
 }
 
+const RemoveErrors = (errors, id) => {
+    const div = document.getElementById(id)
+    const find = errors.find((x) => x.id === id)
+    if(!find && div.children.length > 1){
+        div.removeChild(div.lastElementChild)
+    }
+}
+
 
 
